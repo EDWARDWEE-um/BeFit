@@ -1,2 +1,5 @@
 # BeFit
-A web app/ mobile app that aims to cater for beginners.
+A web app that aims to cater for beginners.
+Created using Django.
+
+Stay Tuned!
