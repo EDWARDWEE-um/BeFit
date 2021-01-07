@@ -1,0 +1,7 @@
+{% extends "workoutlog/base.html" %}
+{% block content %}
+    {% for post in posts %}
+    <h1>{{post.name}}</h1>
+    <p>Sets : {{post.sets}} and Reps : {{post.reps}} on {{post.date}}</p>
+    {% endfor %}
+{% endblock content %}
