@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Workout
 posts = [## Dummy data
     {
     'name':'Push Up',
@@ -20,7 +20,7 @@ posts = [## Dummy data
 
 # Create your views here.
 def home(request):
-    context = {'posts': posts}
+    context = {'posts': Workout.objects.all()}
     return render(request,'workoutlog/home.html',context)
 
 def about(request):
