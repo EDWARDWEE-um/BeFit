@@ -1,0 +1,20 @@
+{% extends "workoutlog/base.html" %}
+{% block content %}
+    <article class="media content-section">
+          <img class ="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.workoutname }}</a>
+              <small class="text-muted">{{ object.date_posted }}</small>
+                {% if object.author == user %}
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'workoutlog-update' object.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'workoutlog-delete' object.id %}">Delete</a>
+                </div>
+                {% endif %}
+            </div>
+            <h2 class="article-title"> Sets : {{ object.sets }} </h2>
+            <p class="article-content">Reps : {{ object.reps }}</p>
+          </div>
+    </article>
+{% endblock content %}
