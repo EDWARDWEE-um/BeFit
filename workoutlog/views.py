@@ -15,8 +15,6 @@ class WorkoutListView(ListView):
     model = Workout
     template_name = 'workoutlog/home.html'
     context_object_name = 'posts'
-    ordering = ['-date_posted'] # order the post date
-    # <app>/<model>_<viewtype.html>
     paginate_by = 5 # page
 
 
@@ -30,6 +28,7 @@ class UserWorkoutListView(ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User,username = self.kwargs.get('username'))
+        return Workout.objects.filter(author=user).order_by('-date_posted')
 
 
 
