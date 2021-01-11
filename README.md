@@ -1,5 +1,6 @@
 # BeFit
 A web app that aims to cater for beginners.
+Allows users to track their workout log.
 Created using Django.
 
 Future improvements and features to be added:
