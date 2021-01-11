@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
 from .models import Workout
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
@@ -16,6 +17,21 @@ class WorkoutListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted'] # order the post date
     # <app>/<model>_<viewtype.html>
+    paginate_by = 5 # page
+
+
+class UserWorkoutListView(ListView):
+    model = Workout
+    template_name = 'workoutlog/user_home.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted'] # order the post date
+    # <app>/<model>_<viewtype.html>
+    paginate_by = 5 # page
+
+    def get_queryset(self):
+        user = get_object_or_404(User,username = self.kwargs.get('username'))
+
+
 
 class WorkoutDetailView(DetailView):
     model = Workout
