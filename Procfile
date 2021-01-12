@@ -1,2 +1,1 @@
-web : gunicorn BeFit.wsgi --log-file-
-web : gunicorn BeFit.:BeFit
+web : gunicorn peaceful-wildwood-34461.wsgi --log-file-
