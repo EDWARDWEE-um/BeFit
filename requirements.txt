@@ -209,7 +209,7 @@ pyls-black @ file:///tmp/build/80754af9/pyls-black_1607553132291/work
 pyls-spyder @ file:///tmp/build/80754af9/pyls-spyder_1608134179673/work
 PyNaCl @ file:///C:/ci/pynacl_1595000047588/work
 pynndescent @ file:///tmp/build/80754af9/pynndescent_1594171481221/work
-pyodbc===4.0.30
+pyodbc===4.0.0-unsupported
 pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
 pyparsing==2.4.7
 pyqtgraph @ file:///tmp/build/80754af9/pyqtgraph_1594064840332/work
