@@ -22,7 +22,7 @@ SECRET_KEY = 'wtp)**lu7$)wyk-ktlpg6+8x+v5gilxoz!f-%ccl_tnxw@d4$^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['befitter.herokuapp.com']
 
 
 # Application definition
@@ -138,3 +138,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_NAME') # Note to change this to other email
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+django_heroku.settings(locals())

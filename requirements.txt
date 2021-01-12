@@ -1,5 +1,8 @@
 absl-py==0.11.0
 alabaster==0.7.12
+anaconda-client==1.7.2
+anaconda-navigator==1.10.0
+anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610302562041/work
 AnyQt==0.0.10
 appdirs==1.4.4
 argh==0.26.2
@@ -55,8 +58,10 @@ defusedxml==0.6.0
 dictdiffer @ file:///tmp/build/80754af9/dictdiffer_1594059095757/work
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distributed @ file:///C:/ci/distributed_1607714134337/work
+dj-database-url==0.5.0
 Django==2.2.5
 django-crispy-forms==1.10.0
+django-heroku==0.3.1
 docutils==0.16
 entrypoints==0.3
 et-xmlfile==1.0.1
@@ -186,6 +191,7 @@ prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1606344362066/w
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1602688806899/work
 protobuf==3.13.0
 psutil @ file:///C:/ci/psutil_1598370330503/work
+psycopg2==2.8.6
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 py @ file:///tmp/build/80754af9/py_1607971587848/work
 pyasn1==0.4.8
@@ -289,6 +295,7 @@ watchdog @ file:///C:/ci/watchdog_1606939226617/work
 wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1
 Werkzeug==1.0.1
+whitenoise==5.2.0
 widgetsnbextension==3.5.1
 win-inet-pton @ file:///C:/ci/win_inet_pton_1605306167264/work
 win-unicode-console==0.5
