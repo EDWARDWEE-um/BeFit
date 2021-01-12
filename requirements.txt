@@ -17,7 +17,7 @@ brotlipy==0.7.0
 cachetools==4.1.1
 certifi==2020.12.5
 click==7.1.2
-clyent==1.2.2
+clyent==1.2.1
 commonmark==0.9.1
 comtypes==1.1.8
 contextlib2==0.6.0.post1
