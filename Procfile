@@ -1,1 +1,1 @@
-web : gunicorn befitter.wsgi --log-file-
+web : gunicorn BeFit.wsgi --log-file-
