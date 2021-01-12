@@ -97,9 +97,6 @@ pycurl==7.43.0.6
 pyflakes==2.2.0
 pyodbc===4.0.20
 python-dateutil==2.8.1
-pywin32==227
-pywin32-ctypes==0.2.0
-pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==20.0.0
 QDarkStyle==2.8.1
