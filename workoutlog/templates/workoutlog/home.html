@@ -1,19 +1,21 @@
 {% extends "workoutlog/base.html" %}
 {% block content %}
-    {% for post in posts %}
-        <article class="media content-section">
-          <img class ="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="{% url 'workoutlog-detail' post.id %}">{{ post.workoutname }}</a>
-              <small class="text-muted">{{ post.date_posted }}</small>
-            </div>
-            <h2><a class="article-title" href="{% url 'workoutlog-detail' post.id %}"> Sets : {{ post.sets }} </a></h2>
-            <p class="article-content">Reps : {{ post.reps }}</p>
-          </div>
-        </article>
-    {% endfor %}
-    {% if is_paginated %}
+    {% if object.author == user %}
+        {% for post in posts %}
+            <article class="media content-section">
+              <img class ="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="{% url 'workoutlog-detail' post.id %}">{{ post.workoutname }}</a>
+                  <small class="text-muted">{{ post.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'workoutlog-detail' post.id %}"> Sets : {{ post.sets }} </a></h2>
+                <p class="article-content">Reps : {{ post.reps }}</p>
+              </div>
+            </article>
+        {% endfor %}
+    {% endif %}
+{% if is_paginated %}
 
         {% if page_obj.has_previous %}
             <a class="btn btn-outline-info mb-4" href="?page=1"> First </a>
