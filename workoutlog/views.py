@@ -17,16 +17,6 @@ class WorkoutListView(ListView):
     context_object_name = 'posts'
     paginate_by = 5 # page
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-    def test_func(self):## prevents other users from updating other user's post
-        Workout = self.get_object()
-        if self.request.user == Workout.author:
-            return True
-        return False
-
 
 class UserWorkoutListView(ListView):
     model = Workout
@@ -37,7 +27,8 @@ class UserWorkoutListView(ListView):
     paginate_by = 5 # page
 
     def get_queryset(self):
-        return self.Workout.objects.filter(user=self.request.user).order_by('-date_posted')
+        user = get_object_or_404(User,username = self.kwargs.get('username'))
+        return Workout.objects.filter(author=user).order_by('-date_posted')
 
 
 
