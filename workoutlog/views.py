@@ -28,7 +28,7 @@ class WorkoutListView(LoginRequiredMixin,ListView):
         return False
 
 
-class UserWorkoutListView(LoginRequiredMixin,ListView):
+class UserWorkoutListView(ListView):
     model = Workout
     template_name = 'workoutlog/user_home.html'
     context_object_name = 'posts'
@@ -38,7 +38,7 @@ class UserWorkoutListView(LoginRequiredMixin,ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User,username = self.kwargs.get('username'))
-        return Workout.objects.filter(author=user).order_by('-date_posted')
+        return self.Workout.objects.filter(user=self.request.user).order_by('-date_posted')
 
 
 
