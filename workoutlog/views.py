@@ -18,7 +18,7 @@ class WorkoutListView(ListView):
     paginate_by = 5 # page
 
 
-class UserWorkoutListView(LoginRequiredMixin,ListView):
+class UserWorkoutListView(ListView):
     model = Workout
     template_name = 'workoutlog/user_home.html'
     context_object_name = 'posts'
