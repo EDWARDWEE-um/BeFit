@@ -11,7 +11,7 @@ def home(request):
 
 
 
-class WorkoutListView(LoginRequiredMixin,ListView):
+class WorkoutListView(ListView):
     model = Workout
     template_name = 'workoutlog/home.html'
     context_object_name = 'posts'
