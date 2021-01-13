@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'wtp)**lu7$)wyk-ktlpg6+8x+v5gilxoz!f-%ccl_tnxw@d4$^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'herokuapp',
+    'catalog',
 ]
 
 MIDDLEWARE = [
