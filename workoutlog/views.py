@@ -5,8 +5,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 
 # Create your views here.
-def home(self , request):
-    context = {'posts': self.Workout.objects.all()}
+def home(request):
+    context = {'posts': Workout.objects.all()}
     return render(request,'workoutlog/home.html',context)
 
 
