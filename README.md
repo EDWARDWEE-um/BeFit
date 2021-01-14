@@ -3,7 +3,7 @@ A web app that aims to cater for beginners.
 Allows users to track their workout log.
 Created using Django.
 
-https://befitpls.herokuapp.com/
+https://letmedeploy.herokuapp.com/
 
 Future improvements and features to be added:
 1) Pagination of workout based on date.
